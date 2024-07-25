@@ -4,8 +4,8 @@ import {addTodo, updateTodo, toggleEditTodo} from '../features/todo/todoSlice'
 
 function AddTodo() {
 
-    const todos = useSelector(state => state.todos);
-    const edit = useSelector(state => state.editTodo)
+    const todos = useSelector(state => state.myTodo.todos);
+    const edit = useSelector(state => state.myTodo.editTodo);
 
     const [input, setInput] = useState("");
     const dispatch = useDispatch();
